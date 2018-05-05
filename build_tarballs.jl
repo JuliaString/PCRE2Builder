@@ -1,6 +1,6 @@
-using BinaryBuilder
-
 const PCRE2_VERSION = "10.31"
+
+using BinaryBuilder
 
 # Collection of sources required to build pcre2
 sources = [
@@ -10,9 +10,9 @@ sources = [
 
 # Bash recipe for building across all platforms
 script = """
-cd $WORKSPACE/srcdir
-cd pcre2-10.31
-./configure --prefix=$prefix --host=$target --enable-jit --enable-pcre2-16 --enable-pcre2-32
+cd \$WORKSPACE/srcdir
+cd pcre2-$(PCRE2_VERSION)
+./configure --prefix=\$prefix --host=\$target --enable-jit --enable-pcre2-16 --enable-pcre2-32
 make
 make install
 """
