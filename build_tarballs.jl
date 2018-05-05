@@ -27,8 +27,7 @@ platforms = [
     Linux(:aarch64, :glibc),
     Linux(:armv7l, :glibc),
     Linux(:powerpc64le, :glibc),
-    MacOS()
-    #BinaryProvider.MacOS(:x86_64, :blank_libc, :blank_abi)
+    MacOS(:x86_64)
 ]
 
 # The products that we will ensure are always built
