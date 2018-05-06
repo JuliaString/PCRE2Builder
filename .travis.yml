@@ -36,3 +36,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: JuliaString/PCRE2Builder
+    tags: true
+# all_branches: true
